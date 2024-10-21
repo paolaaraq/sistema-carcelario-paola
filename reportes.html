@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes de Actividades</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Reportes de Actividades</h1>
+
+        <form id="form-reporte">
+            <div class="form-group">
+                <label for="fecha">Fecha de la Actividad</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="numeroVisitas">Número de Visitas</label>
+                <input type="number" class="form-control" id="numeroVisitas" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="eventos">Eventos en el Penal</label>
+                <input type="text" class="form-control" id="eventos" required placeholder="Descripción de eventos">
+            </div>
+            <div class="form-group">
+                <label for="actividades">Actividades Recreativas</label>
+                <select class="form-control" id="actividades" required>
+                    <option value="">Seleccione una actividad</option>
+                    <option value="Taller de Manualidades">Taller de Manualidades</option>
+                    <option value="Deportes (Fútbol, Baloncesto)">Deportes (Fútbol, Baloncesto)</option>
+                    <option value="Clases de Cocina">Clases de Cocina</option>
+                    <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+                    <option value="Actividades de Lectura">Actividades de Lectura</option>
+                    <option value="Taller de Música">Taller de Música</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Reporte</button>
+        </form>
+
+        <h2 class="my-4">Reportes Registrados</h2>
+        <div id="reportesList"></div>
+    </div>
+
+    <script src="script_reportes.js"></script> 
+</body>
+</html>

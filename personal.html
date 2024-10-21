@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personal Administrativo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Gestión de Personal Administrativo</h1>
+
+        <form id="form-personal">
+            <input type="hidden" id="indexPersonal">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="identificacion">Identificación</label>
+                <input type="text" class="form-control" id="identificacion" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo</label>
+                <select class="form-control" id="cargo" required>
+                    <option value="" disabled selected>Seleccione un cargo</option>
+                    <option value="Guardia">Guardia</option>
+                    <option value="Médico">Médico</option>
+                    <option value="Psicólogo">Psicólogo</option>
+                    <option value="Trabajador Social">Trabajador Social</option>
+                    <option value="Abogado">Abogado</option>
+                    <option value="Educador">Educador</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Nutricionista">Nutricionista</option>
+                    <option value="Terapeuta Ocupacional">Terapeuta Ocupacional</option>
+                    <option value="Jefe de Seguridad">Jefe de Seguridad</option>
+                    <option value="Director del Penal">Director del Penal</option>
+                    <option value="Capellán">Capellán</option>
+                    <option value="Entrenador de Deportes">Entrenador de Deportes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="foto">Foto del Profesional</label>
+                <input type="file" class="form-control-file" id="foto" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Personal</button>
+        </form>
+
+        <h2 class="my-4">Personal Registrado</h2>
+        <div id="personalList"></div>
+    </div>
+
+    <script src="script_personal.js"></script> 
+</body>
+</html>
